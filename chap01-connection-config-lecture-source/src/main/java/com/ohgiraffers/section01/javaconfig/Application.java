@@ -45,7 +45,7 @@ public class Application {
         SqlSession session = sqlSessionFactory.openSession(false);              // false로 설정해야 수동 커밋 가능.
 
         /* 필기. 인터페이스를 조립해서 메소드를 구현 */
-        Mapper mapper = session.getMapper(Mapper.class);                           // 리플렉션
+        Mapper mapper = session.getMapper(Mapper.class);                           // 리플렉션(컴파일 된 값을 다시 해석하여 사용)
 
         java.util.Date date = mapper.selectNow();
         System.out.println("date = " + date);
