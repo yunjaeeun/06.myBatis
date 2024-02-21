@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="config/connection-info.properties"/>
+
+    <!-- properties 파일에 value와 key값을 적어놓고 properties 파일을 불러와 암호화 (github에 올릴 시 properties 파일은 올리면 안됨)-->
+    <environments default="dev">
+        <environment id="dev">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="com.ohgiraffers.section01.xml"/> <!-- 패키지 안에 있는 모든 mapper를 스캔해서 추가. -->
+    </mappers>
+</configuration>
