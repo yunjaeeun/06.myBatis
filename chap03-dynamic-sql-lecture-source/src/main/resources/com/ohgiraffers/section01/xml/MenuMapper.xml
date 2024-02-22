@@ -23,7 +23,7 @@
          3. lte(<=): less than equal
          4. lt(<): less than
          5. eq(==): equal
-         6. ne(!=): not equal
+         6. neq(!=): not equal
 
         <![CDATA[]]> 안에 들어가 있는 문자를 쿼리로 인식시킴
      -->
